@@ -1,10 +1,13 @@
 def isPalindrom(s):
     s = s.lower()
-    
+    for i in range(len(s)//2):
+        if s[i] != s[-1-i]:
+            return False
     return True
 
 
-s = "Топот"
+# s = "Топор"
+s = "А роза упала на лапу Азора."
 pref = '' if isPalindrom(s) else 'не '
 print(f'{s} - {pref}палиндром')
 
