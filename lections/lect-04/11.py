@@ -14,7 +14,12 @@ def getLines(filename, sep=0):
 
 lines = getLines('./docs/data.csv', 1)
 abiturs = getAbiturs(lines)
+avg = sum([x[-1] for x in abiturs]) / len(abiturs)
+filtred = [x for x in abiturs if x[-1]>avg]
 
-print(min(abiturs, key=lambda x: x[2]))
+f_lines = []
+for obj in filtred:
+    f_lines.append(','.join([str(obj[0]),obj[1],str(obj[2])])+'\n')
 
-print(round(3.1415926, 2))
+with open('./f_abits.csv', 'w', encoding='utf8') as f:
+    f.writelines(f_lines)

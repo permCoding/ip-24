@@ -7,4 +7,4 @@ with open('./file_02.txt', 'a') as fw:
     s += chr(65)
     s += chr(10)
     s += '1234'
-    fw.write(s)
+    fw.write(s + '\n')
