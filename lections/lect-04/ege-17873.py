@@ -1,3 +1,5 @@
+# https://kompege.ru/task
+
 nums = [int(x) for x in open('./docs/17_17873.txt')]
 mn = min(nums)
 
