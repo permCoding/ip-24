@@ -3,6 +3,8 @@
 
 [Дистант - трансляция Лекций](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
 
+[Рейтинг ПИнб-1 ИсОП](https://docs.google.com/spreadsheets/d/1LVaA6ylPqNjshHW5J_EsH-A-WXPHCGQblsa5tadMM_I/edit?usp=sharing)  
+
 ---  
 
 
