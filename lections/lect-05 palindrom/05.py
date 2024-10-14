@@ -10,5 +10,6 @@ alph = ''.join(str(i) for i in range(0, 10))
 AZ = ''.join(chr(i) for i in range(65, 91))
 alph += AZ + AZ.lower()
 s = '- 123 000 321 !"@ '
-# s = "А роза упала на лапу Азора."
+# s = "А роза упала на лапу Азора!.."
 print(f'{s} - {"" if isPalindrom(s, alph) else "не "}палиндром')
+# доделать - добавить русские символы
