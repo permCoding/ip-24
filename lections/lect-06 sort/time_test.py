@@ -20,4 +20,4 @@ sort_bubble(t)
 
 fi = dt()
 
-print(fi-st)
+print(round(fi-st, 2))
