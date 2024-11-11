@@ -8,8 +8,7 @@ print(t)
 
 for j in range(0, len(t)-1):
     up_bubble(j)
-
-print(t)
+    print(t)
 
 # 0   9 2 4 6 2   }   swap
 # 1   2 9

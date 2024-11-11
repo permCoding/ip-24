@@ -1,9 +1,11 @@
 t = [9, 2, 4, 6, 2]
 print(t)
+
 for j in range(0, len(t)-1):
     for i in range(0, len(t)-1-j):
         if t[i] > t[i+1]:
             t[i], t[i+1] = t[i+1], t[i]
+
 print(t)
 
 # 0   9 2 4 6 2   }   swap
