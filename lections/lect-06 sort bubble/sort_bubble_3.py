@@ -11,6 +11,7 @@ def sort_bubble_opt(t):
         for i in range(0, len(t)-1-j):
             if t[i] > t[i+1]:
                 t[i], t[i+1] = t[i+1], t[i]
+        # если замен не было, можно выйти
     return t
 
 t = [1, 2, 4, 6, 8]

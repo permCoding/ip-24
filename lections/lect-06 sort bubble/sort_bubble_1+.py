@@ -2,12 +2,23 @@
 t = [9, 2, 4, 6, 2]
 print(t)
 
-for i in range(0, len(t)-1):  # пробегаем слева направо
-    if t[i] > t[i+1]:  # если текущий больше следующего
-        t[i], t[i+1] = t[i+1], t[i]  # то меняем их
+for i in range(0, len(t)-1):
+    if t[i] > t[i+1]:
+        t[i], t[i+1] = t[i+1], t[i]
 
 print(t)
 
+for i in range(0, len(t)-2):
+    if t[i] > t[i+1]:
+        t[i], t[i+1] = t[i+1], t[i]
+
+print(t)
+
+for i in range(0, len(t)-1):
+    if t[i] > t[i+1]:
+        t[i], t[i+1] = t[i+1], t[i]
+
+print(t)
 
 # 0   9 2 4 6 2   }   swap
 # 1   2 9
