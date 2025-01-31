@@ -1,0 +1,8 @@
+{
+    "host": "https://pogoda7.ru/prognoz/",
+    "cities": [
+        { "Perm": "gorod701-Russia-Permskiy_kray-Perm" },
+        { "Krasnodar": "gorod142-Russia-Krasnodarskiy_kray-Krasnodar" },
+        { "Berezniki": "gorod702-Russia-Permskiy_kray-Berezniki"}
+    ]
+}
