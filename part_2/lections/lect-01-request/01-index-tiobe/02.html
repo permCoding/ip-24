@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .table-style {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .table-style th {
+            background-color: #f2f2f2;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            font-size: 18px;
+        }
+
+        .table-style td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .table-style tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Опционально: полосатые строки */
+        .table-style tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .person {
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <table class="table-style">
+        <tbody>
+            <tr><th>id</th><th>lastName</th><th>rating</th></tr>
+            <tr class="person"><td>1</td><td>Мухин</td><td>12.5</td></tr>
+            <tr class="person"><td>2</td><td>Ухова</td><td>13.0</td></tr>
+            <tr class="person"><td>3</td><td>Дуров</td><td>10.1</td></tr>
+            <tr class="person"><td>4</td><td>Нектов</td><td>10.1</td></tr>
+            <tr class="person"><td>5</td><td>Ктотов</td><td>13.0</td></tr>
+            <tr class="person"><td>6</td><td>Один</td><td>13.0</td></tr>
+            <tr class="person"><td>7</td><td>Второй</td><td>12.5</td></tr>
+            <tr class="person"><td>8</td><td>Третий</td><td>10.0</td></tr>
+        </tbody>
+    </table>
+    </center>
+</body>
+</html>
