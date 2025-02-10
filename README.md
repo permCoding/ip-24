@@ -31,3 +31,29 @@
     },
 
 ```
+
+---  
+
+```txt
+Включение альтернативной версии Python
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 2
+
+sudo update-alternatives --list python3
+
+update-alternatives --config python3
+
+sudo apt install python3-pip
+
+sudo python3.12 -m pip install --upgrade pip
+
+sudo apt-get install python-is-python3
+
+sudo apt autoremove
+
+переустановка pip:
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
+sudo python3.12 get-pip.py 
+```
+
