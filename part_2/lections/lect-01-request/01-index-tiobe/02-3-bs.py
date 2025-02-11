@@ -9,27 +9,30 @@ def get_from_url(url):
 
 
 url = "https://pcoding.ru/csv/exam02.html"
+# url = "https://pgatu.ru/today/"
 html = get_from_url(url)
 soup = BS(html, 'html.parser')
 
-title = soup.find('title')
-print(title)
+# title = soup.find('title').text
+# print(title)
 
 table = soup.find('table')
-print(table)
+# print(table)
 
-tbody = table.find('tbody')
-print(tbody)
+# tbody = table.find('tbody')
+# print(tbody)
 
 trs = table.find('tbody').find_all('tr')
-print(trs)
+# for tr in trs[1:]: print(tr)
+# print(trs)
 
 lst = []
 for tr in trs[1:]:
-    id = int(tr.find_all('td')[0].text)
-    name = tr.find_all('td')[1].text
-    rate = float(tr.find_all('td')[2].text)
-    lst.append( (id, name, rate) )
+    tds = tr.find_all('td')
+    id = int(tds[0].text)
+    lastName = tds[1].text
+    rate = float(tds[2].text)
+    lst.append( (id, lastName, rate) )
 
 lst.sort(key=lambda obj: obj[2], reverse=True)
 

@@ -6,28 +6,24 @@ def get_from_url(url):
     req.encoding = "utf8"
     return req.text
 
-def get_from_file():
-    pass
-    pass
-
 
 def get_next_tag(_str, posB, _tag, _class=None):
     cl =  f' class="{_class}"' if _class else ''
     posA = _str.find(f'<{_tag}{cl}>', posB)
     posB = _str.find(f'</{_tag}>', posA)
-    tagTr = _str[posA:posB+5]
+    tagTr = _str[posA:posB+3+len(_tag)]
     return tagTr, posB
 
     
 url = "https://pcoding.ru/csv/exam02.html"
 
-txt = get_from_url(url)
+html = get_from_url(url)
 
 posTr = 0
 while True:
-    tagTr, posTr = get_next_tag(txt, posTr, 'tr', 'person')
+    tagTr, posTr = get_next_tag(html, posTr, 'tr', 'person')
     if posTr < 0: break
-    # print(tagTr)
+    # print(tagTr, posTr)
     
     tdList = []
     posTd = 0
@@ -39,6 +35,10 @@ while True:
 
 
 """
+
+<tr class="person"><td>8</td><td>Третий</td><td>10.0</td></tr>
+
+
 дописать программу:
 
 1) написать функцию выбора содержимого из td
