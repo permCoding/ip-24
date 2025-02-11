@@ -1,0 +1,6 @@
+sudo apt install -y python3.12-venv
+  или: sudo apt install -y python3-venv
+  иногда: sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+python -m venv myenv
+source myenv/bin/activate
+для выхода: deactivate
