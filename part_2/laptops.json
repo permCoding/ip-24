@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "name": "Acer Nitro 5",
+        "CPU": "Intel Core i5",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA GTX 1650",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 105999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/51b13cfc4bdc3e1d2e1c9d55f004d073/0df23a02e98812d9e29b3053f176c813e6c83c26de038cb06547793ed83bec10.jpg.webp"
+    },
+    {
+        "id": 2,
+        "name": "Lenovo IdeaPad 3",
+        "CPU": "AMD Ryzen 5",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 55999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/080d1cbe4d8669f5b66fdb28cd261dbd/69d65f7b1fa2334b659da9d92f8003572578e29f3f1f6d08673ecbf7f3d8565c.png.webp"
+    },
+    {
+        "id": 3,
+        "name": "ASUS TUF Gaming A15",
+        "CPU": "AMD Ryzen 7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA RTX 2060",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 89999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/0821e773ac6d00756fd523d4bd84feed/71679ab23c64f7d3c0c9cbdc92d2552d84498a105ecd989977ce2626a11310cc.jpg.webp"
+    },
+    {
+        "id": 4,
+        "name": "HP Pavilion 15",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA GTX 1650",
+        "Screen": "15,6 дюйма",
+        "Permission": "WQXGA",
+        "Price": 110999,
+        "Image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/b0fa0008180f9facb4fa5dc64dc43e19/fb4e0fb5dec2826ba617e606abf2dd57f3ae9c0dc8fbdf9091b6aee66148c6c5.jpg.webp"
+    },
+    {
+        "id": 5,
+        "name": "Dell Inspiron 15",
+        "CPU": "Intel Core i5",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 62999,
+        "Image": "https://ir-3.ozone.ru/s3/multimedia-1-4/wc1000/7227854464.jpg"
+    },
+    {
+        "id": 6,
+        "name": "MSI GF63",
+        "CPU": "Intel Core i5",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA GTX 1650",
+        "Screen": "15,6 дюйма",
+        "Permission": "Ultra HD",
+        "Price": 83999,
+        "Image": "https://ir-3.ozone.ru/s3/multimedia-4/wc1000/6751988860.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Acer Aspire 5",
+        "CPU": "AMD Ryzen 5",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 49999,
+        "Image": "https://ir-3.ozone.ru/s3/multimedia-1-g/wc1000/6924537880.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Lenovo Legion 5",
+        "CPU": "AMD Ryzen 5",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA GTX 1660 Ti",
+        "Screen": "15,6 дюйма",
+        "Permission": "WQXGA",
+        "Price": 99999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/39569a4d48a0aac7a1954a84786854be/e7416a15d81d902833952b2e0f58f48a68e94a45cd141a4d0296462637b6842c.png.webp"
+    },
+    {
+        "id": 9,
+        "name": "Razer Blade 15",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA RTX 3060",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 169999,
+        "Image": "https://ir-3.ozone.ru/s3/multimedia-f/wc1000/6604238463.jpg"
+    },
+    {
+        "id": 10,
+        "name": "ASUS ZenBook 14",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "14 дюймов",
+        "Permission": "WQXGA",
+        "Price": 99999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/f1ecf8485eb510d9e2645746b5798364/76a5bbc742dcce04f1de162f558a7a2dfb8b130166c88c341cdb2590c9928638.jpg.webp"
+    },
+    {
+        "id": 11,
+        "name": "HP Omen 15",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA GTX 1660 Ti",
+        "Screen": "15,6 дюйма",
+        "Permission": "Ultra HD",
+        "Price": 120999,
+        "Image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/23f0001e6d45f9b8bc71dc61f3b840a9/d3cf05c094d4d69b8dbc1599aa49657ce229ed16567fad7589c6cb4a217a8e12.jpg.webp"
+    },
+    {
+        "id": 12,
+        "name": "Dell XPS 13",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "13,3 дюйма",
+        "Permission": "Full HD",
+        "Price": 129999,
+        "Image": "https://avatars.mds.yandex.net/get-goods_pic/14386084/hat018d76746f272ebc9e823f6137ff0a45/500x500"
+    },
+    {
+        "id": 13,
+        "name": "Acer Swift 3",
+        "CPU": "AMD Ryzen 5",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "14 дюймов",
+        "Permission": "Full HD",
+        "Price": 59999,
+        "Image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/195600088623a3934e80db662a2e09fe/7c3c40ae6d37957df50a1e056f4ef75f60681193803b6010018244809cd20ffe.jpg.webp"
+    },
+    {
+        "id": 14,
+        "name": "Apple MacBook Air",
+        "CPU": "Apple M1",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated",
+        "Screen": "13,3 дюйма",
+        "Permission": "Ultra HD",
+        "Price": 119999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/cdb93f6fbf7ecb6260bea1fc642b5166/c94285ec3feed2e2ff518cc8a8b89f5988d02c0ad68a40067ded40693def629f.jpg.webp"
+    },
+    {
+        "id": 15,
+        "name": "Lenovo ThinkPad X1 Carbon",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "14 дюймов",
+        "Permission": "Ultra HD",
+        "Price": 199999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/8da620a7909e40fc48a30b47529d3054/7eea8cad2f99ee7c4d10fdfa7e1b8f4436173ca9a6fca82ea592be1e6eb1e225.jpg.webp"
+    },
+    {
+        "id": 16,
+        "name": "HP Envy x360",
+        "CPU": "AMD Ryzen 7",
+        "RAM": "16 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 109999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/c30694a9697cdddc55484d295a5e3419/721dfacbc74c8f7461a755827a1e45d60b7e7e63fb7f7473565957b60e823663.jpg.webp"
+    },
+    {
+        "id": 17,
+        "name": "ASUS ROG Zephyrus G14",
+        "CPU": "AMD Ryzen 7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA RTX 3060",
+        "Screen": "14 дюймов",
+        "Permission": "WQXGA",
+        "Price": 159999,
+        "Image": "https://c.dns-shop.ru/thumb/st4/fit/500/500/6ad41fc4d021d294b53342886b6a7a2f/fcba73d73e7bab03709584249ba58e772b2918088ce9e597d34bdcb0bd820826.jpg.webp"
+    },
+    {
+        "id": 18,
+        "name": "Microsoft Surface Laptop 4",
+        "CPU": "Intel Core i5",
+        "RAM": "8 ГБ",
+        "GPU": "Integrated Graphics",
+        "Screen": "13,5 дюйма",
+        "Permission": "Full HD",
+        "Price": 94999,
+        "Image": ""
+    },
+    {
+        "id": 19,
+        "name": "Dell G3 15",
+        "CPU": "Intel Core i5",
+        "RAM": "8 ГБ",
+        "GPU": "NVIDIA GTX 1650",
+        "Screen": "15,6 дюйма",
+        "Permission": "Full HD",
+        "Price": 77999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/265e7a8eb7ab888f32dfca405654bb5f/2bc0f018a78836d2381a96179a23e8d26b622a5200b0fd5c0f64cac153c83e1e.jpg.webp"
+    },
+    {
+        "id": 20,
+        "name": "Acer Predator Helios 300",
+        "CPU": "Intel Core i7",
+        "RAM": "16 ГБ",
+        "GPU": "NVIDIA RTX 3060",
+        "Screen": "15,6 дюйма",
+        "Permission": "Ultra HD",
+        "Price": 135999,
+        "Image": "https://c.dns-shop.ru/thumb/st1/fit/500/500/c6c67e048b288c87d9b5e8f507545d9c/fbdc28dc0d5817db361641f17ef5af9b9243ceab6e843479cf43a6c987197081.jpg.webp"
+    }
+]
