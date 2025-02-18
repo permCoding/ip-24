@@ -12,8 +12,10 @@ url = "https://www.tiobe.com/tiobe-index/"
 html = get_from_url(url)
 soup = BS(html, 'html.parser')
 
-table = soup.find('table')
-trs = table.find_all('tr')[1:]
+trs = soup \
+    .find('table') \
+    .find('tbody') \
+    .find_all('tr')
 for tr in trs:
     tds = tr.find_all('td')
     print(tds[4].text)
