@@ -9,24 +9,26 @@ def get_from_url(url):
     return req.text
 
 
-url = "https://pogoda7.ru/prognoz/"
-city = "gorod142-Russia-Krasnodarskiy_kray-Krasnodar"
-url += city
-html = get_from_url(url)
-soup = BS(html, 'html.parser')
+cities = [
+  "gorod142-Russia-Krasnodarskiy_kray-Krasnodar",
+  "gorod701-Russia-Permskiy_kray-Perm"
+]
 
-tmp = soup \
-    .find('div', class_=['temperature','tooltip']) \
-    .text
+for city in cities:
+    url = "https://pogoda7.ru/prognoz/"
+    url += city
+    html = get_from_url(url)
+    soup = BS(html, 'html.parser')
 
-print(tmp)
+    tmp = soup \
+        .find('div', class_=['temperature','tooltip']) \
+        .text
+    print(tmp.strip()[:-2], city)
 
-print(tmp.strip(' ')[:-2])
-
-match = re.search(r"([-+]?\d+)", tmp)
-if match:
-  number = match.group(1)
-  print(number)
+# match = re.search(r"([-+]?\d+)", tmp)
+# if match:
+#   number = match.group(1)
+#   print(number)
 
 '''
 символ - или + ноль или один раз (?)
@@ -34,7 +36,7 @@ if match:
 потом выбрать группу - это скобки ( )
 '''
 
-match = re.search(r"([-+]{0,1}\d{1,})", tmp)
-if match:
-  number = match.group(1)
-  print(number)
+# match = re.search(r"([-+]{0,1}\d{1,})", tmp)
+# if match:
+#   number = match.group(1)
+#   print(number)
