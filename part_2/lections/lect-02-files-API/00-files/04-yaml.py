@@ -2,7 +2,7 @@ import yaml  # pip install pyyaml
 import json
 
 
-f = open('./data/103.yml')
+f = open('./data/103.yml', encoding='utf8')
 data = yaml.safe_load(f)
 f.close()
 
