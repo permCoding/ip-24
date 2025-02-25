@@ -1,4 +1,16 @@
-# REST API GitHub  
+# Part-02  
+
+## Labrab-02  
+
+### API Parsing  
+
+#### Задания для лабораторной работы:  
+
+---  
+
+**task-01**  
+
+**REST API GitHub**  
 
 https://docs.github.com/ru/rest  
 
@@ -26,3 +38,17 @@ https://docs.github.com/ru/rest
 ```
 
 ---  
+
+**task-02**  
+
+Собрать данные с WB  
+Задание уточним на Лекции  
+
+---  
+
+---
+
+> в след раз можно сделать постраничный парсинг ЧГ  
+
+--- 
+ 
