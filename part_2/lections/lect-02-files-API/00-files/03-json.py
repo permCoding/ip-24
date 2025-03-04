@@ -1,11 +1,11 @@
 import json
 
 f = open('./data/users.json')
-arr = json.load(f)
+lst = json.load(f)
 f.close()
 
-# print(arr)
+# print(lst)
 
-# print(arr[0])
+# print(lst[0])
 
-print(json.dumps(arr[0], indent=2))
+print(json.dumps(lst[0], indent=2))

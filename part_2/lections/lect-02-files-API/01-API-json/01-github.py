@@ -7,6 +7,6 @@ repsonse = requests.get(url)
 repsonse.encoding = "utf8"
 
 lst = repsonse.json()  # ===
-# lst = json.loads(repsonse.text)
+print(json.dumps(lst[0], indent=2, ensure_ascii=False))
 
-print(len(lst))
+# print(len(lst))
