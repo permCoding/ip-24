@@ -16,6 +16,20 @@ json.dump()  # для сохранения json-файла на диск
 json.load()  # для загрузки json-фалй с диска
 ```
 
+Пример, как получить json:  
+
+```py
+import requests, json
+
+
+user = 'permCoding'
+url = f'https://api.github.com/users/{user}/repos'
+repsonse = requests.get(url)
+repsonse.encoding = "utf8"
+
+lst_objects = repsonse.json()
+```
+
 ---  
 
 **task-01**  
@@ -35,7 +49,7 @@ json.load()  # для загрузки json-фалй с диска
 **task-02**  
 
 Загрузите в программу массив объектов из файла `all_products.json`  
-Выбрать только требуемые данные для каждого из объектов и сохранить в виде нового json-массива в таком формате:  
+Выбрать только требуемые данные для каждого из объектов и сохранить в виде нового json-массива в файл `products.json` в таком формате:  
 
 ```txt
 [
