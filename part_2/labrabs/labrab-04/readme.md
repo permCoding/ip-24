@@ -5,93 +5,51 @@
 > 11.03.2025  
 
 Собрать данные с сайта `https://www.wildberries.ru/`  
+НЕ парсить html-страницу, а сделать запрос к API и получить массив продуктов в виде json  
+Для работы использовать библиотеки **requests** и **json**  
 
-```json
-[
-	{
-		"brand": "Pocketbook",
-		"name": "Электронная книга 970",
-		"reviewRating": 4.8,
-		"feedbacks": 203,
-		"price": 3629800,
-		"totalQuantity": 32,
-		"id": 182763343,
-		"link": f"https://www.wildberries.ru/catalog/{id}182763343/detail.aspx"
-	},
-]
-
+```py
 import json
 
-json.dump()
+json.dump()  # для сохранения json-файла на диск
 
-json.load()
+json.load()  # для загрузки json-фалй с диска
 ```
-**task-01**  
-
-Выбрать на сайте WB такой продукт, у которого будет не менее 3-х
-Найти на самом сайте WB ссылку 
-
-Данные собирать в виде json-файла  
-НЕ парсить html-страницу, а сделать запрос к API и получить массив продуктов в виде json  
-Сохранить массив локально в папку с программой в виде products.json  
-Потом из этого файла (там много данных) собрать только требуемые данные в таком виде
-
-
-Cобрать данные:  
-
-- название новости  
-- ссылка на новость  
-- дата  
-- описание новости  
-- сохранить локально в виде json-файла  
-
----  
-
-`*.csv => *.json`  
-
----  
-
-### API Parsing  
-
-#### Задания для лабораторной работы:  
 
 ---  
 
 **task-01**  
 
-**REST API GitHub**  
+Выбрать на сайте WB такой продукт, у которого будет не менее 3-х страниц (это примерно более 300 продуктов)  
+Найти в браузере с помощью Инструмента разработчика на вкладке Net (Сеть) на самом сайте WB ссылку на запрос про выбранные продукты  
 
-https://docs.github.com/ru/rest  
+Например, для адресной строки такой: `https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=onyx+book`  
+Запрос от сайта WB на получение списка продуктов для первой страницы будет выглядеть так:  
+`https://search.wb.ru/exactmatch/ru/male/v9/search?ab_testing=false&appType=1&curr=rub&dest=12358373&lang=ru&page=1&query=onyx%20book&resultset=catalog&sort=popular&spp=30&suppressSpellcheck=false&uclusters=1&uiv=0&uv=AQEAAQIACD5sOCFIPTfWO1xEpcH_tMw78CxSvNNAnbMawum_qkJGurOqTcQsRP8-_j2KxDzBmD3AxNDA-8AQu4U4rzggPh6lWrwhvz3DuLq6vKnAwKx0P7ZBdTskP8bFQrygQbI0-MQzvsNEYsZLRQBAAUCXudC4ar_gNhU6vD2XuaA0LTn1Nm_DXzqcwRA5nbpVQ0e8wzf7Pr84rEBPw00-qjmQvr5A8rp8Pqa9_0MTwMUvzzybPMU4mT7JOjavTcIZPHbEDThzxD26zrvHQ4s-1sDntLu5vDymQ3w_NLF3QY-89DDCuhhCPbcjseC9TTocN7u9qcQKvJg1iC_MPt86N0DxQJs`  
+Для остальных страниц требуется только поменять параметр в запросе: `page=1`  
 
----  
-
-Задание:  
-
-Дан аккаунт: PermCoding  
-
-```txt
-- получить список всех публичных репозиториев  
-- отфильтровать только те где определён язык программирования  
-- выбрать только те где язык программирования Python  
-- отсортировать по дате создания от старых к новым  
-- упростить объекты, выбрать только поля:  
-  - название репозитория  
-  - url-адрес репозитория  
-  - язык программирования  
-  - описание  
-  - дата создания  
-- сохранить в json-файл (структурированно, с отступами)  
-- всем объектам добавить порядковый номер - id  
-- id должны начинаться с единицы  
-- id добавлять обязательно используя enumerate по коллекции  
-```
+Используя библиотеку requests с помощью метода get по этой ссылке на продукты получить массив продуктов с трёх первых страниц и сохранить их локально на диске все в виде одного большого файла json - `all_products.json`  
 
 ---  
 
 **task-02**  
 
-Собрать данные с WB  
-Задание уточним на Лекции  
+Загрузите в программу массив объектов из файла `all_products.json`  
+Выбрать только требуемые данные для каждого из объектов и сохранить в виде нового json-массива в таком формате:  
+
+```txt
+[
+    {
+        "brand": "Pocketbook",
+        "name": "Электронная книга 970",
+        "reviewRating": 4.8,
+        "feedbacks": 203,
+        "price": 3629800,
+        "totalQuantity": 32,
+        "id": 182763343,
+        "link": "https://www.wildberries.ru/catalog/182763343/detail.aspx"
+    },
+    ...
+]
 
 ---  
-
