@@ -1,5 +1,7 @@
 # Part-02  
 
+[видео с Лекции](https://bbb.psaa.ru/playback/presentation/2.3/40dd0e9626dd74bc1dc60f4516cdfe7a791b8793-1741668655414)  
+
 ## Labrab-04  
 
 > 11.03.2025  
