@@ -143,6 +143,7 @@ cursor = conn.cursor()
 # db_delete_all('people')
 
 # records = get_csv()
+# db_insert(records)
 # db_insert_(records)
 # db_insert_one( ('Коля', 189) )
 # db_insert_many()
