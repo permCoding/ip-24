@@ -1,10 +1,11 @@
-import sqlite3
+import sqlite3  # pip install sqlite3
 import csv
+import json
 
  
 def get_csv():
     file = open('./data/data_01.csv', 'r', encoding='utf8')
-    reader = csv.DictReader(file)
+    reader = csv.DictReader(file)  # { "id": 1, "last_name": "Аня" }
     records = list(reader)
     return records
 
@@ -40,7 +41,8 @@ cursor = conn.cursor()
 # db_create()
 
 records = get_csv()
-# print(records)
+# print(json.dumps(records, indent=4, ensure_ascii=False))
+
 db_insert(records)
 
 conn.commit()

@@ -44,6 +44,13 @@ FROM (
 ) AS subquery
 WHERE total_sum > 222
 ORDER BY total_sum DESC;
+
+SELECT
+  last_name,
+  rating,
+  ntile(3) OVER (ORDER BY rating DESC) as group_rating
+FROM
+  people;
 ```
 
 - отсортировать по убыванию суммарного балла за три экзамена
