@@ -1,10 +1,10 @@
 # SQLite  
 
-1. Создание внешнего ключа при создании таблицы people:  
+1) Создание внешнего ключа при создании таблицы people:  
 
 Если таблица people еще не создана, можно сразу добавить определение внешнего ключа в SQL-код для создания таблицы:  
 
-```SQL
+```sql
 CREATE TABLE people (
     id INTEGER PRIMARY KEY,
     lastName TEXT,
@@ -15,12 +15,12 @@ CREATE TABLE people (
 
 ---  
 
-2. Добавление внешнего ключа к существующей таблице people:  
+2) Добавление внешнего ключа к существующей таблице people:  
 
 Если таблица people уже существует, можно добавить внешний ключ с помощью команды ALTER TABLE.  
 SQLite ранее имел ограниченную поддержку ALTER TABLE, но современные версии (3.35.0 и новее) поддерживают добавление внешних ключей напрямую.  
 
-```
+```sql
 ALTER TABLE people
 ADD FOREIGN KEY (idCity) REFERENCES cities(idCity);
 ```
@@ -31,7 +31,7 @@ ADD FOREIGN KEY (idCity) REFERENCES cities(idCity);
 
 По умолчанию, поддержка внешних ключей в SQLite отключена. В большинстве случаев нужно включить её для каждого соединения с базой данных. Это делается следующим образом:  
 
-```
+```sql
 PRAGMA foreign_keys = ON;
 ```
 
@@ -45,3 +45,34 @@ PRAGMA foreign_keys = ON;
 
 ---  
 
+С помощью оператора CONSTRAINT можно задать имя для ограничения внешнего ключа:
+
+```sql
+CREATE TABLE users
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    age INTEGER,
+    company_id INTEGER,
+    CONSTRAINT users_companies_fk 
+    FOREIGN KEY (company_id)  REFERENCES companies (id)
+);
+```
+
+Вставка записи в таблицу с внешним ключём:  
+
+```sql
+SELECT lastName, cityName 
+FROM people
+JOIN cities
+WHERE people.idCity = cities.id
+```
+
+```sql
+INSERT INTO people (lastName, idCity) 
+VALUES 
+(
+    'Максимов', 
+    (SELECT id FROM cities WHERE cityName = "Кунгур")
+);
+```
