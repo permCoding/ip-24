@@ -16,3 +16,69 @@
 Напишите программу, которая определит количество людей, родившихся в том же городе, что и хотя бы один из их родителей.  
 
 ---  
+
+Решение с помощью SQLite:  
+
+```sql
+-- PRAGMA foreign_keys = ON;
+
+-- SELECT refs.idChild, people.cityName 
+-- FROM refs JOIN people
+-- WHERE refs.idChild = people.idPerson
+-- 486
+
+-- SELECT DISTINCT refs.idChild, people.cityName 
+-- FROM refs JOIN people
+-- WHERE refs.idChild = people.idPerson
+-- 341
+
+-- SELECT count(DISTINCT refs.idChild) as cnt
+-- FROM refs JOIN people
+-- WHERE refs.idChild = people.idPerson
+-- 341
+
+-- SELECT DISTINCT people.cityName
+-- FROM refs JOIN people
+-- WHERE refs.idChild = people.idPerson
+-- ORDER BY people.cityName
+-- 10
+
+-- SELECT count(DISTINCT people.cityName) as cnt
+-- FROM refs JOIN people
+-- WHERE refs.idChild = people.idPerson
+-- 10 - города детей
+
+-- SELECT count(DISTINCT people.cityName) as cnt
+-- FROM refs JOIN people
+-- WHERE refs.idParent = people.idPerson
+-- 10 - города родителей
+
+-- 
+
+-- SELECT refs.idChild, people.cityName 
+-- FROM refs
+-- JOIN people ON refs.idChild = people.idPerson
+
+-- SELECT refs.idParent, p1.cityName, refs.idChild, p2.cityName
+-- FROM refs
+-- JOIN people as p1 ON refs.idParent = p1.idPerson
+-- JOIN people as p2 ON refs.idChild = p2.idPerson
+
+-- SELECT refs.idParent, refs.idChild
+-- FROM refs
+-- JOIN people AS p1 ON refs.idParent = p1.idPerson
+-- JOIN people AS p2 ON refs.idChild = p2.idPerson
+-- WHERE p1.cityName = p2.cityName;
+
+-- SELECT DISTINCT refs.idChild
+-- FROM refs
+-- 	JOIN people AS p1 ON refs.idParent = p1.idPerson
+-- 	JOIN people AS p2 ON refs.idChild = p2.idPerson
+-- 		WHERE p1.cityName = p2.cityName;
+
+SELECT count(DISTINCT refs.idChild) as cnt 
+FROM refs
+JOIN people AS p1 ON refs.idParent = p1.idPerson
+JOIN people AS p2 ON refs.idChild = p2.idPerson
+WHERE p1.cityName = p2.cityName;
+```	
