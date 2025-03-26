@@ -82,3 +82,13 @@ JOIN people AS p1 ON refs.idParent = p1.idPerson
 JOIN people AS p2 ON refs.idChild = p2.idPerson
 WHERE p1.cityName = p2.cityName;
 ```	
+
+Индексация полей записи.  
+При работе с большими объёмами данных запросы на пересечение связанных таблиц могут работать медленно.  
+В этом случае для повышения производительности запроса рекомендуется создать индексы на столбцах idParent, idChild в таблице refs и на столбце idPerson в таблице people:  
+
+```sql
+CREATE INDEX idx_refs_idParent ON refs (idParent);
+CREATE INDEX idx_refs_idChild ON refs (idChild);
+CREATE INDEX idx_people_idPerson ON people (idPerson);
+```
