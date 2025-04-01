@@ -1,7 +1,8 @@
 # ip-24
 Информатика с основами программирования
 
-[Дистант - трансляция Лекций](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
+[BBB Дистант - трансляция Лекций](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
+[Yandex Дистант - трансляция лекций](https://telemost.yandex.ru/j/49275900163503)  
 
 [Рейтинг ПИнб-1 ИсОП](https://docs.google.com/spreadsheets/d/1LVaA6ylPqNjshHW5J_EsH-A-WXPHCGQblsa5tadMM_I/edit?usp=sharing)  
 
