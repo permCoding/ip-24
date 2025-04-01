@@ -1,8 +1,11 @@
-# ip-24
+# ip-24  
+
 Информатика с основами программирования
 
-[BBB Дистант - трансляция Лекций](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
-[Yandex Дистант - трансляция лекций](https://telemost.yandex.ru/j/49275900163503)  
+> Дистант - трансляция Лекций:  
+
+[1 -- BBB --](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
+[2 -- Yandex --](https://telemost.yandex.ru/j/49275900163503)  
 
 [Рейтинг ПИнб-1 ИсОП](https://docs.google.com/spreadsheets/d/1LVaA6ylPqNjshHW5J_EsH-A-WXPHCGQblsa5tadMM_I/edit?usp=sharing)  
 
@@ -70,4 +73,3 @@ python -m venv myenv
 source myenv/bin/activate
 для выхода: deactivate
 ```
-
