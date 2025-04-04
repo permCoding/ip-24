@@ -2,68 +2,27 @@ import sqlite3
 
 
 def db_select():
-    # query = "SELECT * FROM users"
-
-    # query = """SELECT lastName, firstName, gender 
-    #                 FROM users 
-    #                 WHERE gender = false 
-    #                 ORDER BY lastName, firstName
-    #                 LIMIT 10"""
-
-    # query = """
-    #     SELECT nameGroup, lastName, firstName
-    #         FROM users u, groups g 
-    #         WHERE u.idGroup = g.idGroup
-    #         ORDER BY g.nameGroup, u.lastName"""
-
-    # query = """
-    #     SELECT nameGroup, lastName, firstName
-    #         FROM users u 
-    #         JOIN groups g 
-    #         ON u.idGroup = g.idGroup
-    #         ORDER BY g.nameGroup, u.lastName"""
-
-    # query = """
-    #     SELECT 
-    #         ROW_NUMBER() OVER (
-    #             PARTITION BY nameGroup ORDER BY lastName, firstName
-    #         ) as row_number, 
-    #         nameGroup, 
-    #         lastName, 
-    #         firstName
-    #     FROM users u JOIN groups g ON u.idGroup = g.idGroup
-    #     ORDER BY nameGroup, lastName"""
-
-    # query = """
-    #     SELECT * FROM (
-    #         SELECT 
-    #             ROW_NUMBER() OVER (
-    #                 PARTITION BY nameGroup ORDER BY lastName, firstName
-    #             ) as row_number, 
-    #             nameGroup, 
-    #             lastName, 
-    #             firstName
-    #         FROM users u JOIN groups g ON u.idGroup = g.idGroup
-    #         ORDER BY nameGroup, lastName
-    #     ) WHERE row_number <= 5"""
-    
-    query = """
-        SELECT 
-            NTILE(4) OVER (ORDER BY lastName, firstName) as num_band, 
-            nameGroup, 
-            lastName, 
-            firstName
-        FROM users u JOIN groups g ON u.idGroup = g.idGroup
-        ORDER BY num_band, nameGroup, lastName"""
-    
+    query = "SELECT * FROM users"
     cursor.execute(query)
     for row in cursor.fetchall(): print(row)
 
+
+def db_insert(values):
+    query = """insert into users 
+        (lastName, firstName, gender, idGroup) 
+        values (?, ?, ?, 
+            (SELECT idGroup FROM groups WHERE nameGroup = ?)
+        )"""
+    cursor.execute(query, values)
+    conn.commit()
 
 conn = sqlite3.connect("./users.db")
 cursor = conn.cursor()
 cursor.execute("PRAGMA foreign_keys = ON;")  # Включаем поддержку внешних ключей
 
+person = ("Иванова", "Соня", 0, "ПИнб-1")
+
+# db_insert(person)
 db_select()
 
 conn.close()

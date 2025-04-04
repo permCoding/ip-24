@@ -24,6 +24,7 @@ def db_create():
         "firstName" TEXT, \
         "gender" INTEGER, \
         "idGroup" INTEGER, \
+        PRIMARY KEY("idUser" AUTOINCREMENT), \
         FOREIGN KEY("idGroup") REFERENCES "groups"("idGroup") \
     )'
     cursor.execute(query)
@@ -55,7 +56,7 @@ conn = sqlite3.connect("./users.db")
 cursor = conn.cursor()
 cursor.execute("PRAGMA foreign_keys = ON;")  # Включаем поддержку внешних ключей
 
-# db_create()
+db_create()
 
 records = get_csv('./groups.csv')
 # print(json.dumps(records, indent=4, ensure_ascii=False))
