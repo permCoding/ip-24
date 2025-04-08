@@ -36,5 +36,3 @@ lastNames, firstNames = create_words(amount, 3, 5), create_words(amount, 2, 4)
 persons = [(i+1,lastNames[i],firstNames[i],random.randint(0,1),random.randint(1,len(groupNames))) for i in range(amount)]
 headers = ['idUser', 'lastName', 'firstName', 'gender', 'idGroup']
 write_to_csv('./users.csv', persons, headers)
-
-

@@ -1,3 +1,22 @@
+```sql
+-- SELECT lastName, idGroup
+-- FROM users
+-- ORDER BY idGroup DESC, lastName 
+-- LIMIT 25
+
+-- SELECT g.nameGroup, u.lastName
+--   FROM users u, groups g
+--  WHERE u.idGroup = g.idGroup
+--  ORDER BY nameGroup, lastName 
+-- O(n*m)
+
+SELECT g.nameGroup, u.lastName
+	FROM users u 
+	JOIN groups g ON u.idGroup = g.idGroup
+		ORDER BY nameGroup, lastName DESC
+-- O(n+m)
+```
+
 
 - сгенерировать csv-файлы со списком групп и со списком учащихся  
 - сделать выборку:
