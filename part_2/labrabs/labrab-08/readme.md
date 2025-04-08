@@ -17,6 +17,25 @@ SELECT g.nameGroup, u.lastName
 	JOIN groups g ON u.idGroup = g.idGroup
 		ORDER BY nameGroup, lastName DESC
 -- O(n+m)
+
+
+-- SELECT 
+-- 		row_number() OVER(PARTITION BY g.nameGroup ORDER BY u.lastName) as ind,
+-- 		g.nameGroup, 
+-- 		u.lastName
+-- 	FROM users u 
+-- 	JOIN groups g ON u.idGroup = g.idGroup
+-- ORDER BY g.nameGroup, ind, u.lastName
+
+SELECT * FROM
+(SELECT 
+		row_number() OVER(PARTITION BY g.nameGroup ORDER BY u.lastName) as _ind,
+		g.nameGroup, 
+		u.lastName
+	FROM users u 
+	JOIN groups g ON u.idGroup = g.idGroup
+ORDER BY g.nameGroup, _ind, u.lastName)
+WHERE _ind <= 3
 ```
 
 
